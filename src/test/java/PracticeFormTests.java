@@ -64,7 +64,7 @@ public class PracticeFormTests {
         for (Iterator hobbie = hobbiesVals.values().iterator(); hobbie.hasNext(); )
             $("label[for=" + hobbie.next() + "]").click();
         $("#uploadPicture").uploadFile(file);
-        $("#currentAddress").setValue("currentAddress");
+        $("#currentAddress").setValue(currentAddress);
         $("#state").click();
         $(By.xpath("//div[contains(text(),'Rajasthan')]")).click();
         $("#city").click();
