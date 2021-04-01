@@ -42,6 +42,7 @@ public class StudentsRegistrationFormPage {
         this.aHobbies = new String[]{"Sports", "Reading"};
         this.aSubjects = new String[]{"Computer Science", "English"};
     }
+
     public StudentsRegistrationFormPage(Faker faker) {
         this.firstName = faker.name().firstName();
         this.lastName = faker.name().lastName();

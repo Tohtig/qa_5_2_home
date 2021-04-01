@@ -7,7 +7,7 @@ import java.util.Locale;
 
 public class StudentsRegistrationFormTests {
     StudentsRegistrationFormPage studentsRegistrationFormPage;
-    Faker faker = new Faker(new Locale("ru"));
+    Faker faker;
 
     @Test
     void successfulFillFormTest() {
@@ -18,7 +18,8 @@ public class StudentsRegistrationFormTests {
     }
 
     @Test
-    void successfulFillFormTestWithJavaFaker(Faker faker) {
+    void successfulFillFormTestWithFacker() {
+        faker = new Faker(new Locale("en"));
         studentsRegistrationFormPage = new StudentsRegistrationFormPage(faker);
         studentsRegistrationFormPage.openPage();
         studentsRegistrationFormPage.fillForm();
