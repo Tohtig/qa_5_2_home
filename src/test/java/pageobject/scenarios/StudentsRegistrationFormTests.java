@@ -1,6 +1,7 @@
 package pageobject.scenarios;
 
 import org.junit.jupiter.api.Test;
+import com.github.javafaker.Faker;
 
 import java.util.Locale;
 

@@ -6,6 +6,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import com.github.javafaker.Faker;
 
 public class StudentsRegistrationFormPage {
     private String firstName,
@@ -42,16 +43,16 @@ public class StudentsRegistrationFormPage {
         this.aSubjects = new String[]{"Computer Science", "English"};
     }
     public StudentsRegistrationFormPage(Faker faker) {
-        this.firstName = "Анна";
-        this.lastName = "Ипполитова";
-        this.userEmail = "aippolitov@email.com";
-        this.gender = "Female";
-        this.userNumber = "9001231234";
+        this.firstName = faker.name().firstName();
+        this.lastName = faker.name().lastName();
+        this.userEmail = faker.internet().emailAddress();
+        this.gender = faker.demographic().sex();
+        this.userNumber = faker.number().digits(10);
         this.monthOfBirth = "May";
         this.yearOfBirth = "1988";
         this.dayOfBirth = "10";
         this.dayOfWeekOfBirth = "Tuesday";
-        this.currentAddress = "Россия, лучший город Земли, ул. Ленина, д.1";
+        this.currentAddress = faker.address().fullAddress();
         this.state = "Rajasthan";
         this.city = "Jaipur";
         this.filePath = "ApacheJmeter.ico";
