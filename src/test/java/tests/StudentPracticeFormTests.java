@@ -4,12 +4,13 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class PracticeFormTests {
+public class StudentPracticeFormTests {
 
     @BeforeAll
     static void setup() {
@@ -46,7 +47,7 @@ public class PracticeFormTests {
         $(".react-datepicker__day.react-datepicker__day--025").click();
         for (String sbjTemp : aSubjects)
             $("#subjectsInput").setValue(sbjTemp).sendKeys(Keys.ENTER);
-        for (String hobby : aHobbies){
+        for (String hobby : aHobbies) {
             $("#hobbiesWrapper").$(byText(hobby)).click();
         }
         $("#uploadPicture").uploadFromClasspath(filePath);

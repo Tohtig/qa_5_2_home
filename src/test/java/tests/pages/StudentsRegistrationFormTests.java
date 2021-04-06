@@ -1,4 +1,4 @@
-package pageobject.scenarios;
+package tests.pages;
 
 import org.junit.jupiter.api.Test;
 import com.github.javafaker.Faker;
