@@ -1,4 +1,4 @@
-package pageobject.scenarios;
+package tests.pages;
 
 import org.openqa.selenium.Keys;
 
